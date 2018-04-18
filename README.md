@@ -1,7 +1,6 @@
-# ember-first
+# Quote Note App
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This README outlines the details of collaborating and running the Quote Note application locally.
 
 ## Prerequisites
 
