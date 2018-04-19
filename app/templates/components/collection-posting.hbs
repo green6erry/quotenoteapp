@@ -1,5 +1,8 @@
 <article class="posting">
-	<img src="{{collection.image}}" alt="">
+	<a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+		<img src="{{collection.image}}" alt="">
+		<small>View Larger</small>
+	</a>
 	<h3>{{collection.title}}</h3>
 	<div class = "detail owner">
 		<span>Created by:</span> {{collection.owner}} 
