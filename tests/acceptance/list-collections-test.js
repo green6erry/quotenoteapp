@@ -1,9 +1,11 @@
 import { module, test } from 'qunit';
 import { visit, currentURL, click, findAll} from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 
 module('Acceptance | list collections', function(hooks) {
   setupApplicationTest(hooks);
+  setupMirage(hooks);
 
   test('Show message collections as the home page', async function (assert) {
       await visit('/');
