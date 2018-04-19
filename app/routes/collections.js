@@ -27,7 +27,7 @@ model() {
       city: 'Portland',
       category: 'comedy',
       quantity: 30,
-      image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
+      image: 'https://www.babelio.com/users/AVT_Oscar-Wilde_5324.jpg',
       description: 'Oscar Wilde was a hoot. Lighten up your day with a collection of ridiculous things writers have said'
     }];
   }
