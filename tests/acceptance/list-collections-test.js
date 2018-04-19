@@ -1,12 +1,15 @@
 import { module, test } from 'qunit';
-import { visit, currentURL } from '@ember/test-helpers';
+import { visit, currentURL, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
 module('Acceptance | list collections', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('Show message collections on front page', async function (assert) {
-	});
+  test('Show message collections as the home page', async function (assert) {
+        await visit('/');
+    assert.equal(currentURL(), '/collections', 'should redirect automatically');
+  });	
+
   test('Link to information about the collection', async function (assert) {
 	});
   test('Link to user who made each collection', async function (assert) {
