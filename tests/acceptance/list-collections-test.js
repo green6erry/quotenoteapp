@@ -10,8 +10,16 @@ module('Acceptance | list collections', function(hooks) {
     assert.equal(currentURL(), '/collections', 'should redirect automatically');
   });	
 
-  test('Link to information about the collection', async function (assert) {
+  test('Link to about company information should be visible', async function (assert) {
+	await visit ('/');
+	await click (".menu-about");
+	assert.equal(currentURL(), '/about', 'should navigate to about');
 	});
+  test('link to contact information page should be visible', async function(assert){
+	await visit ('/');
+	await click(".menu-contact");
+	assert.equal(currentURL(), '/contact', 'should navigate to contact page');
+});
   test('Link to user who made each collection', async function (assert) {
 	});
   test('Filter collections by category, recent, or popular', async function (assert) {
