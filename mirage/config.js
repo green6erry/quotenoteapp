@@ -1,9 +1,7 @@
 export default function() {
   this.namespace = '/api';
 
-  this.get('/collections', function() {
-    return {
-      data: [{
+  let collections = [{
         type: 'collections',
         id: 'us-presidents',
         attributes: {
@@ -36,7 +34,15 @@ export default function() {
           quantity: 30,
           image: 'https://www.babelio.com/users/AVT_Oscar-Wilde_5324.jpg'
         }
-      }]
-    };
-  });
+      }];
+      this.get('/collections', function(db, request){
+        if(request.queryParams.category !== undefined) {
+          let filteredCollections = collections.filter(function(i) {
+            return i.attributes.category.toLowerCase().indexOf(request.queryParams.category.toLowerCase()) !== -1;
+          });
+          return { data: filteredCollections };
+        } else {
+          return {data: collections };
+        }
+      });
 }
