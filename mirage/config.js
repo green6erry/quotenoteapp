@@ -5,7 +5,7 @@ export default function() {
     return {
       data: [{
         type: 'collections',
-        id: 'grand-old-mansion',
+        id: 'us-presidents',
         attributes: {
           title: 'US Presidents',
           owner: 'Amanda',
@@ -16,10 +16,10 @@ export default function() {
         }
       }, {
         type: 'collections',
-        id: 'urban-living',
+        id: 'powerful-women',
         attributes: {
           title: 'Powerful Women',
-          owner: 'Alex Jones',
+          owner: 'Paul Jones',
           city: 'Seattle',
           category: 'empowerment',
           quantity: 13,
@@ -27,7 +27,7 @@ export default function() {
         }
       }, {
         type: 'collections',
-        id: 'downtown-charm',
+        id: 'funny-writers',
         attributes: {
           title: 'Writers say the Darndest Things',
           owner: 'Sam Cook',
