@@ -5,4 +5,19 @@
   {{#link-to "about" class="button"}}
     About Us
   {{/link-to}}
+{{#each model as |collection|}}
+	<article class="posting">
+		<h3>{{collection.title}}</h3>
+		<div class = "detail user">
+			<span>Created by:</span> {{collection.owner}} 
+			<br /> {{collection.city}}
+		</div>
+		<div class = "detail subject">
+			<span>Category:</span> {{collection.category}}
+		</div>
+		<div class = "detail quantity">
+			{{collection.quantity}}<span> quotes</span> 
+		</div>
+	</article>
+{{/each}}
 </div>
